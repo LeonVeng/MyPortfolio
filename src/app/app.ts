@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
-  readonly title = signal('Portfolio - Ingénieur Full-Stack Java / Angular');
+  readonly title = signal('Léon DU - Ingénieur Full-Stack Java / Angular');
   readonly isMobileMenuOpen = signal(false);
 
   toggleMobileMenu(): void {

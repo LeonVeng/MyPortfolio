@@ -17,7 +17,8 @@ describe('App', () => {
   it('should initialize with correct default title and closed mobile menu', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
-    expect(app.title()).toContain('Portfolio');
+    expect(app.title()).toContain('Léon DU');
+    expect(app.title()).toContain('Full-Stack');
     expect(app.isMobileMenuOpen()).toBe(false);
   });
 
@@ -44,5 +45,13 @@ describe('App', () => {
     expect(compiled.querySelector('#competences')).toBeTruthy();
     expect(compiled.querySelector('#projets')).toBeTruthy();
     expect(compiled.querySelector('#contact')).toBeTruthy();
+
+    // Vérification des 3 projets spécifiés
+    expect(compiled.textContent).toContain('P7 — CI/CD');
+    expect(compiled.textContent).toContain('P8 — Encadrement');
+    expect(compiled.textContent).toContain('P10 — Your Car Your Way');
+
+    // Vérification des informations de contact
+    expect(compiled.textContent).toContain('Du.leon@yahoo.fr');
   });
 });
