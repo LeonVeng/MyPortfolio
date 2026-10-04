@@ -1,0 +1,434 @@
+<!-- En-tête & Barre de navigation -->
+<header class="header">
+  <div class="container header-container">
+    <a href="#accueil" class="brand-logo" (click)="closeMobileMenu()">
+      <span class="logo-symbol">&lt;/&gt;</span>
+      <span class="logo-text">Portfolio <span class="logo-accent">Java / Angular</span></span>
+    </a>
+
+    <!-- Bouton menu burger accessible -->
+    <button
+      type="button"
+      class="mobile-menu-toggle"
+      [class.is-active]="isMobileMenuOpen()"
+      (click)="toggleMobileMenu()"
+      aria-label="Basculer le menu de navigation"
+      [attr.aria-expanded]="isMobileMenuOpen()"
+      aria-controls="primary-navigation"
+    >
+      <span class="burger-bar" aria-hidden="true"></span>
+      <span class="burger-bar" aria-hidden="true"></span>
+      <span class="burger-bar" aria-hidden="true"></span>
+    </button>
+
+    <!-- Navigation principale -->
+    <nav
+      id="primary-navigation"
+      class="nav-menu"
+      [class.is-open]="isMobileMenuOpen()"
+      aria-label="Navigation principale"
+    >
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#accueil" class="nav-link" (click)="closeMobileMenu()">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a href="#a-propos" class="nav-link" (click)="closeMobileMenu()">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a href="#parcours" class="nav-link" (click)="closeMobileMenu()">Parcours</a>
+        </li>
+        <li class="nav-item">
+          <a href="#competences" class="nav-link" (click)="closeMobileMenu()">Compétences</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projets" class="nav-link" (click)="closeMobileMenu()">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link nav-link-cta" (click)="closeMobileMenu()">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- Section 1 : Accueil (Hero) -->
+  <section id="accueil" class="section hero-section">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Ingénieur Full-Stack Java / Angular
+      </div>
+      <h1 class="hero-title">
+        Concevoir des architectures fiables et des interfaces réactives,
+        <span class="gradient-text">de la conception à la production</span>.
+      </h1>
+      <p class="hero-description">
+        Ingénieur logiciel fort d'une expérience continue en intégration, recette applicative,
+        exploitation en production et développement Full-Stack (Java / Spring Boot &amp; Angular).
+        Je conçois des solutions logicielles performantes, maintenables et orientées qualité.
+      </p>
+      <div class="hero-actions">
+        <a href="#projets" class="btn btn-primary">Découvrir mes projets</a>
+        <a href="#parcours" class="btn btn-secondary">Mon parcours</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 : À propos -->
+  <section id="a-propos" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Présentation</span>
+        <h2 class="section-title">À propos de ma démarche</h2>
+        <p class="section-subtitle">
+          Une approche d'ingénierie globale qui allie rigueur technique, maîtrise du cycle de vie
+          logiciel et sens de l'expérience utilisateur.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-icon" aria-hidden="true">⚙️</div>
+          <h3 class="about-card-title">Backend Robuste &amp; Évolutif</h3>
+          <p class="about-card-text">
+            Développement d'APIs REST structurées, microservices et logique métier avec l'écosystème
+            Java &amp; Spring Boot. Conception de modèles de données optimisés et respect des principes
+            Clean Architecture / SOLID.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-icon" aria-hidden="true">⚡</div>
+          <h3 class="about-card-title">Frontend Réactif &amp; Accessible</h3>
+          <p class="about-card-text">
+            Conception d'applications web modernes avec Angular, tirant parti des Signals, de
+            l'architecture standalone, du typage strict TypeScript et des normes d'accessibilité WCAG AA.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-icon" aria-hidden="true">🛡️</div>
+          <h3 class="about-card-title">Culture Qualité &amp; Exploitation</h3>
+          <p class="about-card-text">
+            Une vision forgée sur le terrain : tests automatisés, intégration continue, diagnostic
+            rapide des anomalies et prise en compte des contraintes de production dès la première ligne de code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 : Parcours & Continuité -->
+  <section id="parcours" class="section career-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expérience Transverse</span>
+        <h2 class="section-title">Parcours &amp; Continuité Technique</h2>
+        <p class="section-subtitle">
+          Comment chaque étape de mon parcours nourrit aujourd'hui mon expertise d'ingénieur Full-Stack.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Étape 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true">1</div>
+          <div class="timeline-content">
+            <span class="timeline-period">Fondations Qualité</span>
+            <h3 class="timeline-title">Intégration &amp; Recette Applicative</h3>
+            <p class="timeline-text">
+              Validation fonctionnelle et technique approfondie des livrables, élaboration de scénarios
+              de test, automatisation et détection précoce des régressions. Une compréhension intime
+              des critères de conformité métier.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Tests de non-régression</span>
+              <span class="tag">Recette fonctionnelle</span>
+              <span class="tag">Gestion des anomalies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true">2</div>
+          <div class="timeline-content">
+            <span class="timeline-period">Maturité Opérationnelle</span>
+            <h3 class="timeline-title">Exploitation &amp; Mise en Production</h3>
+            <p class="timeline-text">
+              Déploiement en environnements de production, suivi de la performance, analyse de logs,
+              gestion d'incidents et maintien en conditions opérationnelles (MCO). Sensibilisation aiguë
+              aux enjeux de résilience et de haute disponibilité.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Déploiement</span>
+              <span class="tag">Observabilité &amp; Logs</span>
+              <span class="tag">Résilience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true">3</div>
+          <div class="timeline-content">
+            <span class="timeline-period">Ingénierie Logicielle</span>
+            <h3 class="timeline-title">Développement Full-Stack Java / Angular</h3>
+            <p class="timeline-text">
+              Conception et développement de bout en bout d'applications métiers performantes.
+              Les expériences passées permettent de produire un code directement prêt pour l'intégration,
+              la recette et l'exploitation sans frottement.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Java / Spring Boot</span>
+              <span class="tag">Angular / TypeScript</span>
+              <span class="tag">CI/CD &amp; Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 : Compétences -->
+  <section id="competences" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Stack &amp; Outils</span>
+        <h2 class="section-title">Compétences Techniques</h2>
+        <p class="section-subtitle">
+          Un socle technologique éprouvé articulé autour de standards modernes et pérennes.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Pilier Backend -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-pill pill-java">Backend</span>
+            <h3 class="skills-card-title">Java &amp; Écosystème</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <strong>Java 17 / 21</strong> : Programmation orientée objet, Records, Streams, Concurrence
+            </li>
+            <li class="skills-item">
+              <strong>Spring Boot 3</strong> : Spring Data JPA, Spring Security, Spring Web
+            </li>
+            <li class="skills-item">
+              <strong>APIs RESTful</strong> : Conception de contrats d'API, OpenAPI / Swagger
+            </li>
+            <li class="skills-item">
+              <strong>Bases de données</strong> : PostgreSQL, Oracle, MySQL, migrations Flyway/Liquibase
+            </li>
+            <li class="skills-item">
+              <strong>Architecture</strong> : Microservices, Clean Architecture, Design Patterns
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pilier Frontend -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-pill pill-angular">Frontend</span>
+            <h3 class="skills-card-title">Angular &amp; Web Moderne</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <strong>Angular (v18+)</strong> : Standalone components, Signals, OnPush change detection
+            </li>
+            <li class="skills-item">
+              <strong>TypeScript</strong> : Typage strict, interfaces génériques, programmation propre
+            </li>
+            <li class="skills-item">
+              <strong>Gestion d'état &amp; Réactivité</strong> : Signals, computed(), RxJS
+            </li>
+            <li class="skills-item">
+              <strong>Styles &amp; UI</strong> : SCSS pur, CSS Grid, Flexbox, Responsive Design
+            </li>
+            <li class="skills-item">
+              <strong>Accessibilité</strong> : Conformité WCAG AA, balises sémantiques, navigation clavier
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pilier Qualité & DevOps -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-pill pill-quality">Qualité &amp; Ops</span>
+            <h3 class="skills-card-title">Tests, Intégration &amp; Outils</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <strong>Tests &amp; Validation</strong> : Vitest, JUnit 5, Mockito, Postman
+            </li>
+            <li class="skills-item">
+              <strong>Conteneurisation</strong> : Docker, Docker Compose
+            </li>
+            <li class="skills-item">
+              <strong>CI / CD</strong> : GitLab CI, GitHub Actions, Jenkins
+            </li>
+            <li class="skills-item">
+              <strong>Versioning &amp; Build</strong> : Git, Maven, Gradle, NPM
+            </li>
+            <li class="skills-item">
+              <strong>Environnement</strong> : Linux, scripts Shell/Bash, IntelliJ IDEA
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 : Projets -->
+  <section id="projets" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Réalisations</span>
+        <h2 class="section-title">Projets Récents</h2>
+        <p class="section-subtitle">
+          Exemples de projets illustrant la mise en pratique de l'ingénierie Full-Stack Java / Angular.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projet 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">Application Full-Stack</span>
+            <h3 class="project-title">Plateforme de Gestion &amp; Suivi Opérationnel</h3>
+          </div>
+          <p class="project-description">
+            Application web d'entreprise dédiée au pilotage des activités et des indicateurs d'exploitation.
+            Architecture modulaire avec API REST sécurisée et interface fluide temps réel.
+          </p>
+          <div class="project-stack">
+            <span class="tech-tag">Java 21</span>
+            <span class="tech-tag">Spring Boot 3</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">Signals</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status">En production</span>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">Outil Qualité &amp; Recette</span>
+            <h3 class="project-title">Module d'Automatisation &amp; Validation de Flux</h3>
+          </div>
+          <p class="project-description">
+            Outil d'automatisation des vérifications de non-régression et de cohérence des données lors
+            des phases d'intégration et de recette pré-production.
+          </p>
+          <div class="project-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Batch</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status">Livré &amp; Opérationnel</span>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">Portfolio Personnel</span>
+            <h3 class="project-title">Portfolio Professionnel V1 (Single-Page)</h3>
+          </div>
+          <p class="project-description">
+            Développement d'une vitrine technique moderne, ultra-légère et accessible (WCAG AA),
+            réalisée avec les dernières fonctionnalités Angular et du SCSS pur sans framework lourd.
+          </p>
+          <div class="project-stack">
+            <span class="tech-tag">Angular 21</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Signals</span>
+            <span class="tech-tag">SCSS pur</span>
+            <span class="tech-tag">Vitest</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status">Version active</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6 : Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-container">
+      <div class="section-header">
+        <span class="section-tag">Échangeons</span>
+        <h2 class="section-title">Prendre Contact</h2>
+        <p class="section-subtitle">
+          Vous avez un projet, une opportunité ou un échange technique à partager ?
+          N'hésitez pas à me contacter directement.
+        </p>
+      </div>
+
+      <div class="contact-cards">
+        <a href="mailto:contact@example.com" class="contact-card" aria-label="Envoyer un email">
+          <div class="contact-icon" aria-hidden="true">✉️</div>
+          <div class="contact-info">
+            <span class="contact-label">Email Professionnel</span>
+            <span class="contact-value">contact&#64;example.com</span>
+          </div>
+        </a>
+
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+          aria-label="Profil LinkedIn (nouvelle fenêtre)"
+        >
+          <div class="contact-icon" aria-hidden="true">💼</div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Consulter mon profil</span>
+          </div>
+        </a>
+
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+          aria-label="Profil GitHub (nouvelle fenêtre)"
+        >
+          <div class="contact-icon" aria-hidden="true">💻</div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">Voir mes dépôts de code</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Pied de page -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-left">
+      <p class="footer-brand">Portfolio d'Ingénieur Full-Stack Java / Angular</p>
+      <p class="footer-tech">Développé avec Angular &amp; SCSS pur &bull; Conception accessible et responsive</p>
+    </div>
+    <div class="footer-right">
+      <a href="#accueil" class="back-to-top" aria-label="Retourner en haut de la page">
+        Haut de page &uarr;
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,48 @@
+import { TestBed } from '@angular/core/testing';
+import { App } from './app';
+
+describe('App', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [App],
+    }).compileComponents();
+  });
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('should initialize with correct default title and closed mobile menu', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    expect(app.title()).toContain('Portfolio');
+    expect(app.isMobileMenuOpen()).toBe(false);
+  });
+
+  it('should toggle and close mobile menu', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+
+    app.toggleMobileMenu();
+    expect(app.isMobileMenuOpen()).toBe(true);
+
+    app.closeMobileMenu();
+    expect(app.isMobileMenuOpen()).toBe(false);
+  });
+
+  it('should render the main hero heading and 6 key sections', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    expect(compiled.querySelector('h1')?.textContent).toContain('architectures fiables');
+    expect(compiled.querySelector('#accueil')).toBeTruthy();
+    expect(compiled.querySelector('#a-propos')).toBeTruthy();
+    expect(compiled.querySelector('#parcours')).toBeTruthy();
+    expect(compiled.querySelector('#competences')).toBeTruthy();
+    expect(compiled.querySelector('#projets')).toBeTruthy();
+    expect(compiled.querySelector('#contact')).toBeTruthy();
+  });
+});
