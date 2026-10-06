@@ -693,6 +693,20 @@
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-top: var(--spacing-xs);
+  line-height: 1.5;
+
+  .footer-vibe {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--color-primary);
+    font-weight: 500;
+
+    .vibe-icon {
+      font-size: 0.75em;
+      opacity: 0.9;
+    }
+  }
 }
 
 .back-to-top {

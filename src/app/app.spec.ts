@@ -53,5 +53,13 @@ describe('App', () => {
 
     // Vérification des informations de contact
     expect(compiled.textContent).toContain('veng.leon@gmail.com');
+
+    // Vérification du footer et de la mention Vibe Coding
+    const footerTech = compiled.querySelector('.footer-tech');
+    expect(footerTech).toBeTruthy();
+    expect(footerTech?.textContent).toContain('Angular');
+    expect(footerTech?.textContent).toContain('Spring Boot');
+    expect(footerTech?.textContent).toContain('Git');
+    expect(footerTech?.textContent).toContain('Vibe Coding');
   });
 });
