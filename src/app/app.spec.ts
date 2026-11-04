@@ -17,7 +17,7 @@ describe('App', () => {
   it('should initialize with correct default title and closed mobile menu', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
-    expect(app.title()).toContain('Leang CHOUTEAU');
+    expect(app.title()).toContain('Léon VENG');
     expect(app.title()).toContain('Full-Stack');
     expect(app.isMobileMenuOpen()).toBe(false);
   });
@@ -52,7 +52,7 @@ describe('App', () => {
     expect(compiled.textContent).toContain('P10 — Your Car Your Way');
 
     // Vérification des informations de contact
-    expect(compiled.textContent).toContain('chouteau.leang@yahoo.fr');
+    expect(compiled.textContent).toContain('veng.leon@gmail.com');
 
     // Vérification du footer et de la mention Vibe Coding
     const footerTech = compiled.querySelector('.footer-tech');
